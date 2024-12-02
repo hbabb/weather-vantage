@@ -1,8 +1,9 @@
+import { nextui } from "@nextui-org/react";
 import type { Config } from "tailwindcss";
 
-export default {
+const config: Config = {
   content: [
-    "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
+    "./node_modules/@nextui-org/theme/dist/**/*.{js,ts,jsx,tsx}",
     "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
@@ -14,5 +15,50 @@ export default {
       },
     },
   },
-  plugins: [],
-} satisfies Config;
+  darkMode: "class",
+  plugins: [
+    nextui({
+      prefix: "nextui",
+      addCommonColors: true,
+      defaultTheme: "light",
+      defaultExtendTheme: "light",
+      layout: {
+        fontSize: {},
+        lineHeight: {},
+        radius: {},
+        disabledOpacity: 0.5,
+        dividerWeight: "16px",
+        borderWidth: {},
+        boxShadow: {},
+      },
+      themes: {
+        light: {
+          layout: {
+            fontSize: {},
+            lineHeight: {},
+            radius: {},
+            disabledOpacity: 0.5,
+            dividerWeight: "16px",
+            borderWidth: {},
+            boxShadow: {},
+          },
+          colors: {},
+        },
+        dark: {
+          layout: {
+            fontSize: {},
+            lineHeight: {},
+            radius: {},
+            disabledOpacity: 0.5,
+            dividerWeight: "16px",
+            borderWidth: {},
+            boxShadow: {},
+          },
+          colors: {},
+        },
+      },
+    }),
+  ],
+};
+
+export default config;

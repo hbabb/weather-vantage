@@ -1,36 +1,85 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Weather Prediction and Analysis App
+
+A weather analysis platform offering real-time updates, historical trends, and machine learning-based predictions for localized weather conditions.
+
+---
+
+## Features
+
+- **User Authentication**: Secure login and preferences storage.
+- **Real-Time Updates**: Fetch live weather data via API.
+- **Historical Trends**: Visualize past weather data.
+- **ML-Powered Predictions**: Predict future weather conditions.
+- **Custom Alerts**: Notify users when weather thresholds are met.
+- **Multi-Location Support**: Track weather for multiple locations.
+
+---
+
+## Tech Stack
+
+### Frontend
+
+- **Next.js**: React framework for the user interface.
+- **TypeScript**: Strongly typed JavaScript for reliability.
+- **TailwindCSS**: Utility-first styling framework.
+
+### Backend
+
+- **Next.js API Routes**: Backend API functionality.
+- **Neon**: PostgreSQL database for weather and user data.
+- **Drizzle ORM**: Simplified database queries with TypeScript support.
+- **zod**: Schema validation for backend logic.
+- **Next Safe Actions**: Secure server-side actions.
+
+### Machine Learning
+
+- **Python Flask API**: ML-based weather prediction API.
+
+### Other Tools
+
+- **Auth.js**: User authentication.
+- **Sentry**: Error tracking and monitoring.
+
+---
 
 ## Getting Started
 
-First, run the development server:
+1. **Clone the Repository**:
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+   ```bash
+   git clone https://github.com/your-repo/weather-analysis.git
+   cd weather-analysis
+   ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+2. **Install Dependencies**:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+   ```bash
+   npm install
+   ```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+3. **Setup Environment Variables**:
 
-## Learn More
+   ```bash
+   cp .env.example .env
+   ```
 
-To learn more about Next.js, take a look at the following resources:
+4. **Run the App**:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+   ```bash
+   npm run dev
+   ```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+5. **Run the Python ML API**:
 
-## Deploy on Vercel
+   ```bash
+   cd ml-api
+   python app.py
+   ```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Future Enhancements
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- Add support for voice-activated commands.
+- Integrate radar and satellite imagery.
+- Develop a mobile app companion.
+
+## License
